@@ -73,7 +73,7 @@ const Hero = () => {
           <span>{t("full")}</span>
         </motion.h1>
         {/* LANGUAGE SWITCHER */}
-        <div className="language-switcher">
+        <motion.div className="language-switcher">
           <select
             className="lang-dropdown"
             value={i18n.language}
@@ -83,7 +83,7 @@ const Hero = () => {
             <option value="ru">RUS</option>
             <option value="es">ESP</option>
           </select>
-        </div>
+        </motion.div>
         {/* AWARDS */}
         <motion.div
           variants={awardVariants}
@@ -156,7 +156,7 @@ const Hero = () => {
           <motion.a variants={followVariants} href="https://t.me/grachevsergeye">
             <img src="/tg.png" alt="" />
           </motion.a>
-          <motion.a variants={followVariants} href="https://www.instagram.com/grachevsergeye">
+          <motion.a variants={followVariants} href="https://www.instagram.com/grachevsergeyee">
             <img src="/instagram.png" alt="" />
           </motion.a>
           <motion.a variants={followVariants} href="https://www.youtube.com/@grachevsergeye">
@@ -190,7 +190,8 @@ const Hero = () => {
         to="contact" 
         smooth={true}
         duration={200}
-        offset={-50} 
+        offset={-50}
+        hashSpy={false}
         className="contactLink"
       >
             <svg viewBox="0 0 200 200" width="150" height="150">

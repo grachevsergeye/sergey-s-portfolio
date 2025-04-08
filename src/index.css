@@ -64,3 +64,12 @@ section {
     max-width: 1536px;
   }
 }
+
+::-webkit-scrollbar {
+  width: 17px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #795dbb;
+  width: 50px;
+}

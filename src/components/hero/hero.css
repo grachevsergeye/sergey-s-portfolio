@@ -57,7 +57,7 @@
 
 .language-switcher {
   top: 12px;
-  right: 369px;
+  right: 190px;
   z-index: 1000;
   position: absolute;
 }
@@ -65,6 +65,7 @@
 .lang-dropdown {
   padding: 8px 12px;
   border-radius: 8px;
+  border-color: #784cdd;
   background-color: #784cdd;
   color: #ffffff;
   font-weight: 500;
@@ -186,6 +187,7 @@
 
 .contactLink {
   margin-bottom: 50px;
+  cursor: pointer;
 }
 
 .contactButton {

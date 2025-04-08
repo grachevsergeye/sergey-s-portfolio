@@ -63,13 +63,14 @@ const Contact = () => {
     }, []);
 
   return (
-    <div className="contact" ref={ref} onSubmit={sendEmail}>
+    <div className="contact" ref={ref}>
       <div className="cSection">
-        <motion.form
-          ref={form}
-          variants={listVariant}
-          animate={isInView ? "animate" : "initial"}
-        >
+      <motion.form
+            ref={form}
+            onSubmit={sendEmail}
+            variants={listVariant}
+            animate={isInView ? "animate" : "initial"}
+          >
           <motion.h1 variants={listVariant} className="cTitle">
           {t("keep")}
           </motion.h1>

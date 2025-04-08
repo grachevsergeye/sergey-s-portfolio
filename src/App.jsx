@@ -1,32 +1,39 @@
 import LazyLoad from "react-lazyload";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import Hero from "./components/hero/Hero";
 import Contact from "./components/contact/Contact";
+import Services from "./components/services/Services";
 
-const Services = lazy(() => import("./components/services/Services"));
 const Portfolio = lazy(() => import("./components/portfolio/Portfolio"));
 
 const App = () => {
+
+  useEffect(() => {
+    if (window.location.hash) {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+  
+    const timeout = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <div className="container">
-           {/* Disabled lazy loading for homepage and contacts for button to work properly */}
+           {/* Disabled lazy loading for button and scroll to work properly */}
           <section id="home">
             <Hero />
           </section>
 
-      <Suspense fallback={"loading..."}>
-        <LazyLoad height={"100vh"} offset={-100}>
           <section id="services">
             <Services />
           </section>{" "}
-        </LazyLoad>
-      </Suspense>
 
       <Suspense fallback={"loading..."}>
         <LazyLoad height={"600vh"} offset={-100}>
-          {/* <section id="portfolio"> */}
           <Portfolio />
-          {/* </section>{" "} */}
         </LazyLoad>
       </Suspense>
 
