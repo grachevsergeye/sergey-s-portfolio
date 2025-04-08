@@ -12,7 +12,7 @@ const MugcoffeeContainer = () => {
             <Mugcoffee />
           </Stage>
           <OrbitControls enableZoom={true} autoRotate />
-          <PerspectiveCamera position={[0, -1, 2]} zoom={0.7} makeDefault />
+          <PerspectiveCamera position={[0, -1, 33]} zoom={0.75} makeDefault />
         </Suspense>
       </Canvas>
     );

@@ -55,6 +55,10 @@ const Hero = () => {
     </React.Fragment>
   ));
 
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <div className="hero">
       <div className="hSection left">
@@ -68,6 +72,18 @@ const Hero = () => {
           <span dangerouslySetInnerHTML={{ __html: t("hey") }} /><br />
           <span>{t("full")}</span>
         </motion.h1>
+        {/* LANGUAGE SWITCHER */}
+        <div className="language-switcher">
+          <select
+            className="lang-dropdown"
+            value={i18n.language}
+            onChange={(e) => i18n.changeLanguage(e.target.value)}
+          >
+            <option value="en">ENG</option>
+            <option value="ru">RUS</option>
+            <option value="es">ESP</option>
+          </select>
+        </div>
         {/* AWARDS */}
         <motion.div
           variants={awardVariants}

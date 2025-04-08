@@ -55,6 +55,37 @@
   width: 30%;
 }
 
+.language-switcher {
+  top: 12px;
+  right: 369px;
+  z-index: 1000;
+  position: absolute;
+}
+
+.lang-dropdown {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: #784cdd;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.lang-dropdown:hover {
+  outline: none;
+}
+
+.lang-dropdown option {
+  background: #784cdd;
+  color: #ffffff;
+  cursor: pointer;
+}
+
 .awards p {
   font-size: 14px;
   color: #ddd;
