@@ -57,7 +57,7 @@
 
 .language-switcher {
   top: 12px;
-  right: 190px;
+  left: 15px;
   z-index: 1000;
   position: absolute;
 }
