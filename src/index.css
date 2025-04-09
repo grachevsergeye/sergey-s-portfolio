@@ -66,10 +66,11 @@ section {
 }
 
 ::-webkit-scrollbar {
-  width: 17px;
+  width: 14px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #795dbb;
-  width: 50px;
+  /* background: #795dbb; */
+  background: linear-gradient(rgb(133, 58, 202), rgb(142, 87, 230), rgb(177, 120, 230));
+  width: 60px;
 }

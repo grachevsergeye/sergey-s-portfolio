@@ -157,6 +157,8 @@ const Portfolio = () => {
     [0, -window.innerWidth * items.length]
   );
 
+  const isPortfolioInView = useInView(ref, { margin: "-50% 0px -50% 0px" });
+
   return (
     <div className="portfolio" ref={ref}>
       <motion.div className="pList" style={{ x: xTranslate }}>
@@ -175,28 +177,34 @@ const Portfolio = () => {
       <section />
       <section />
       <section />
-      <div className="pProgress">
-        <svg width="80%" height="80%" viewBox="0 0 160 160">
-          <circle
-            cx="80"
-            cy="80"
-            r="70"
-            fill="none"
-            stroke="#ddd"
-            strokeWidth={20}
+      <div  className="pProgress"
+            style={{
+              opacity: isPortfolioInView ? 1 : 0,
+              pointerEvents: isPortfolioInView ? "auto" : "none",
+              transition: "opacity 0.5s ease",
+            }}
+          >
+            <svg width="80%" height="80%" viewBox="0 0 160 160">
+              <circle
+                cx="80"
+                cy="80"
+                r="70"
+                fill="none"
+                stroke="#ddd"
+                strokeWidth={20}
+              />
+              <motion.circle
+                cx="80"
+                cy="80"
+                r="70"
+                fill="none"
+                stroke="#795dbb"
+                strokeWidth={20}
+                style={{ pathLength: scrollYProgress }}
+                transform="rotate(-90 80 80)"
           />
-          <motion.circle
-            cx="80"
-            cy="80"
-            r="70"
-            fill="none"
-            stroke="#795dbb"
-            strokeWidth={20}
-            style={{ pathLength: scrollYProgress }}
-            transform="rotate(-90 80 80)"
-          />
-        </svg>
-      </div>
+          </svg>
+        </div>
     </div>
   );
 };

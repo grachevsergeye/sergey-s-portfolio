@@ -105,42 +105,52 @@ const Hero = () => {
           </motion.div>
         </motion.div>
         {/* SCROLL SVG */}
-        <motion.a
-          animate={{ y: [0, 5], opacity: [0, 1, 0] }}
-          transition={{
-            repeat: Infinity,
-            duration: 4,
-            ease: "easeInOut",
-          }}
-          href="#services"
-          className="scroll"
-        >
-          <svg
-            width="50px"
-            height="50px"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5 9C5 5.13401 8.13401 2 12 2C15.866 2 19 5.13401 19 9V15C19 18.866 15.866 22 12 22C8.13401 22 5 18.866 5 15V9Z"
-              stroke="white"
-              strokeWidth="1"
-            />
-            <motion.path
-              animate={{ y: [0, 5] }}
-              transition={{
-                repeat: Infinity,
-                duration: 4,
-                ease: "easeInOut",
-              }}
-              d="M12 5V8"
-              stroke="white"
-              strokeWidth="1"
-              strokeLinecap="round"
-            />
-          </svg>
-        </motion.a>
+        <motion.div
+      animate={{ y: [0, 0], opacity: [0, 1, 0] }}
+      transition={{
+        repeat: Infinity,
+        duration: 4,
+        ease: "easeInOut",
+      }}
+      className="scroll"
+    >
+  <Link to="services" smooth={true} duration={300} offset={-50}>
+  <motion.svg
+  width="60px"
+  height="60px"
+  viewBox="0 0 64 64"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  initial={{ rotateX: 0 }}
+  animate={{ rotateX: [0, -10, 0] }}
+  transition={{
+    duration: 2,
+    ease: "easeInOut",
+    repeat: Infinity
+  }}
+  style={{
+    transformStyle: "preserve-3d",
+    transformOrigin: "bottom center"
+  }}
+>
+  {/* Laptop base */}
+  <rect x="10" y="40" width="44" height="8" fill="#795dbb" rx="2" stroke="white"
+    strokeWidth="1"/>
+  
+  {/* Laptop screen */}
+  <motion.rect
+    x="14"
+    y="16"
+    width="36"
+    height="24"
+    rx="2"
+    fill="#795dbb"
+    stroke="white"
+    strokeWidth="1"
+  />
+</motion.svg>
+  </Link>
+</motion.div>
       </div>
       <div className="hSection right">
         {/* FOLLOW */}
@@ -150,19 +160,49 @@ const Hero = () => {
           animate="animate"
           className="follow"
         >
-          <motion.a variants={followVariants} href="https://github.com/grachevsergeye">
+          <motion.a variants={followVariants} 
+            href="https://github.com/grachevsergeye"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <img src="/github.png" alt="" />
           </motion.a>
-          <motion.a variants={followVariants} href="https://t.me/grachevsergeye">
+          <motion.a variants={followVariants} 
+            href="https://t.me/grachevsergeye"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <img src="/tg.png" alt="" />
           </motion.a>
-          <motion.a variants={followVariants} href="https://www.instagram.com/grachevsergeyee">
+          <motion.a variants={followVariants} 
+            href="https://www.instagram.com/grachevsergeyee"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <img src="/instagram.png" alt="" />
           </motion.a>
-          <motion.a variants={followVariants} href="https://www.youtube.com/@grachevsergeye">
+          <motion.a variants={followVariants} 
+            href="https://www.youtube.com/@grachevsergeye"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            >
             <img src="/youtube.png" alt="" />
           </motion.a>
-          <motion.a variants={followVariants} href="https://x.com/">
+          <motion.a variants={followVariants} 
+            href="https://x.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            >
             <img src="/x.png" alt="" />
           </motion.a>
           <motion.div variants={followVariants} className="followTextContainer">

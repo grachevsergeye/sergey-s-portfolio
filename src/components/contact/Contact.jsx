@@ -100,19 +100,17 @@ const Contact = () => {
           {success && <span>Your message has been sent!</span>}
           {error && <span>Something went wrong!</span>}
         </motion.form>
-        <motion.button className="homeButton">
-              <Link
-                to="home"
-                className="homeLink"
-                smooth={true}
-                duration={300}   // Smooth scroll duration
-                offset={-50}     // Adjust if you have a fixed header
-                onClick={() => {
-                  console.log("Navigating to home"); // Debugging click event
-                }}
-              >⬆{t("home")}⬆
-              </Link>
-        </motion.button>
+        <motion.div className="homeButton">
+          <Link
+            to="home"
+            className="homeLink"
+            smooth={true}
+            duration={300}
+            offset={-50}
+          >
+            ⬆{t("home")}⬆
+          </Link>
+        </motion.div>
       </div>
       <div className="cSection"><ContactSvg/></div>
     </div>

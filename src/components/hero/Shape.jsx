@@ -8,7 +8,7 @@ const Shape = () => {
           color="#795dbb"
           attach="material"
           distort={0.5}
-          speed={1.4}
+          speed={1.5}
         />
       </Sphere>
       <ambientLight intensity={2} />
